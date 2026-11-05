@@ -15,5 +15,5 @@ Personal portfolio. Computer Science student at Morgan State University.
 ## Contact
 
 - Email: [amit7111019@gmail.com](mailto:amit7111019@gmail.com)
-- LinkedIn: [linkedin.com/in/b-amit10](https://linkedin.com/in/b-amit10)
+- LinkedIn: [linkedin.com/in/b-amit10](https://www.linkedin.com/in/amit-bhattarai-b-amit10/)
 - GitHub: [github.com/b-amit11](https://github.com/b-amit11)
