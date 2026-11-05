@@ -1,29 +1,5 @@
 (function(){
-  // YouTube link for the song in the music bar.
-  var YOUTUBE_URL = "https://www.youtube.com/watch?v=8kyWDhB_QeI";
-  function videoId(u){
-    var m = String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
-    return m ? m[1] : "";
-  }
-  var vid = videoId(YOUTUBE_URL);
-  var watchUrl = vid ? "https://www.youtube.com/watch?v=" + vid : "https://www.youtube.com/results?search_query=Kanye+West+All+Falls+Down";
   document.getElementById("yr").textContent = new Date().getFullYear();
-
-  var player = document.getElementById("player");
-  var btn = document.getElementById("playBtn");
-  var embed = document.getElementById("embed");
-  btn.addEventListener("click", function(){
-    var on = !player.classList.contains("on");
-    player.classList.toggle("on", on);
-    btn.setAttribute("aria-expanded", on);
-    btn.textContent = on ? "Stop" : "Play";
-    if (on) {
-      embed.innerHTML = (vid ? '<div class="yt"><iframe title="All Falls Down on YouTube" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' : '') +
-        '<p class="fallback">Not playing? <a href="' + watchUrl + '" target="_blank" rel="noopener">Listen on YouTube</a></p>';
-    } else {
-      embed.innerHTML = "";
-    }
-  });
 
   var c = document.getElementById("pitch");
   function draw(){
