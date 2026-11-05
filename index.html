@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amit Bhattarai</title>
+<meta name="description" content="Amit Bhattarai, software engineer and CS student at Morgan State University. Backend, distributed systems and full-stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">AB<span>.</span></a>
+    <ul>
+      <li><a href="#lineup">Projects</a></li>
+      <li><a href="#film-room">About</a></li>
+      <li><a href="#formation">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mono" style="color:var(--pitch);margin:0 0 14px">Software Engineer · Morgan State CS '27</p>
+      <h1>Amit<span class="last">Bhattarai</span></h1>
+      <p class="tagline">Run <em>your own</em> race.</p>
+      <p class="lede"> "No such thing in Life that is better than yours" - J.Cole. I focus on myself without comparing myself with others. I build backend and distributed systems, test them until they break, and try to be a little better than I was last season.</p>
+      <div class="btns">
+        <a class="btn primary" href="#lineup">See my projects</a>
+        <a class="btn" href="https://github.com/b-amit11" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <aside class="sheet" aria-label="Player card">
+      <div class="photo">
+        <img src="assets/amit.jpg" alt="Amit Bhattarai">
+        <span class="tag mono">Met</span>
+      </div>
+      <dl>
+        <dt>Position</dt><dd>Backend · Distributed Systems · Full-Stack · Artificial Intelligence </dd>
+        <dt>Club</dt><dd>Morgan State University, B.S. Computer Science</dd>
+        <dt>Home</dt><dd>Great Mills, Maryland</dd>
+        <dt>Status</dt><dd><span class="dot" aria-hidden="true"></span>Available Summer 2027</dd>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<div class="board" aria-label="Key numbers">
+  <div class="wrap">
+    <div class="stat"><b>4.0</b><span>GPA</span></div>
+    <div class="stat"><b>7</b><span>Projects shipped</span></div>
+    <div class="stat"><b>250<small>+</small></b><span>Automated tests</span></div>
+    <div class="stat"><b>5<small>ms</small></b><span>p99 at 2,000 sockets</span></div>
+  </div>
+</div>
+
+<main>
+<section class="block" id="lineup">
+  <div class="wrap">
+    <div class="head"><h2>The Lineup</h2><span class="mono">Projects</span></div>
+
+    <article class="feature card">
+      <div class="pitchviz">
+        <canvas id="pitch" aria-hidden="true"></canvas>
+        <span class="mono">Captain's pick · Live</span>
+        <div class="metrics">
+          <div><b>2,000</b><span>Concurrent sockets</span></div>
+          <div><b>19,328</b><span>Deliveries / sec</span></div>
+          <div><b>5 ms</b><span>p99 latency</span></div>
+          <div><b>0</b><span>Lost after a server kill</span></div>
+        </div>
+      </div>
+      <div class="copy">
+        <span class="num">01</span>
+        <h3>Parley</h3>
+        <p class="sub">Distributed real-time chat platform</p>
+        <ul>
+          <li>Slack-style workspaces, channels and DMs on three stateless Node servers behind nginx.</li>
+          <li>Exactly-once, in-order delivery with per-channel Postgres sequence numbers and idempotent client message IDs.</li>
+          <li>Found an 11 s failover delay in nginx defaults and cut p99 delivery during failover to 135 ms. A CI chaos job and 40 tests run against real Postgres and Redis.</li>
+        </ul>
+        <div class="chips"><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span><span>WebSockets</span><span>React</span><span>Docker</span></div>
+        <div class="links">
+          <a href="https://parley-9epp.onrender.com" target="_blank" rel="noopener">Live demo</a>
+          <a href="https://github.com/b-amit11/parley" target="_blank" rel="noopener">Code on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="card">
+        <span class="num">02</span>
+        <h3>Calorie Tracker</h3>
+        <p class="sub">Web app + native macOS companion</p>
+        <ul>
+          <li>Food search across USDA and Open Food Facts, barcode scanning, and an offline PWA that replays entries safely on reconnect.</li>
+          <li>A Swift menu-bar app that turns the MacBook trackpad into a gram scale and streams readings to the web app.</li>
+          <li>104 tests with CI on Linux and macOS.</li>
+        </ul>
+        <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Drizzle</span><span>SQLite</span><span>Swift</span></div>
+        <div class="links"><a href="https://github.com/b-amit11/calorie-tracker" target="_blank" rel="noopener">Code on GitHub</a></div>
+      </article>
+
+      <article class="card">
+        <span class="num">03</span>
+        <h3>RepoBrain</h3>
+        <p class="sub">Code search engine with cited answers</p>
+        <ul>
+          <li>Parses Python with tree-sitter, indexes Git snapshots incrementally by blob hash, and ranks with BM25.</li>
+          <li>REST API, browser UI and a read-only MCP server. LLM answers must cite real source excerpts or fall back to raw evidence.</li>
+        </ul>
+        <div class="chips"><span>Python</span><span>FastAPI</span><span>tree-sitter</span><span>SQLite FTS5</span><span>MCP</span></div>
+        <div class="links"><a href="https://github.com/b-amit11/repobrain" target="_blank" rel="noopener">Code on GitHub</a></div>
+      </article>
+
+      <article class="card">
+        <span class="num">04</span>
+        <h3>SnapShop</h3>
+        <p class="sub">Photo-to-purchase, web and mobile</p>
+        <ul>
+          <li>Snap a photo of an item. The API identifies it with a vision model and checks Google Shopping, Kroger and Google Places in parallel.</li>
+          <li>Ranks offers by price, speed and stock. One typed API serves the web client and the iOS/Android app.</li>
+        </ul>
+        <div class="chips"><span>TypeScript</span><span>Node.js</span><span>React Native</span><span>Expo</span><span>Docker</span></div>
+        <div class="links"><a href="https://github.com/b-amit11/snapshop" target="_blank" rel="noopener">Code on GitHub</a></div>
+      </article>
+
+      <article class="card">
+        <span class="num">05</span>
+        <h3>Ola Data Agent</h3>
+        <p class="sub">Analytics agent with database guardrails</p>
+        <ul>
+          <li>Routes plain-English questions to SQL or Python ETL workflows.</li>
+          <li>Runs through a SELECT-only database role with query validation and bounded retries. 43 tests on SQLite and PostgreSQL.</li>
+        </ul>
+        <div class="chips"><span>Python</span><span>LangGraph</span><span>PostgreSQL</span><span>Docker</span></div>
+        <div class="links"><a href="https://github.com/b-amit11/ola-data-agent" target="_blank" rel="noopener">Code on GitHub</a></div>
+      </article>
+    </div>
+
+    <div class="bench" aria-label="More projects">
+      <div><span class="num">06</span><b>Judges' Blind Spot</b><p>Predicts split MMA judging decisions from 6,439 scored rounds, with leakage-safe chronological splits. Built because I watch way too much fight analysis.</p></div>
+      <div><span class="num">07</span><b>ReturnDesk</b><p>Returns support where the model only extracts fields and plain code decides eligibility. Parameterized SQL, 38 tests, Docker.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="film-room">
+  <div class="wrap">
+    <div class="head"><h2>Film Room</h2><span class="mono">About me</span></div>
+    <div class="film">
+      <div>
+        <p class="big">I came here chasing <em>MLS.</em> I found engineering.</p>
+        <p>Soccer was the plan. When I came to the U.S., the goal was the MLS, and I got as far as playing college soccer for the College of Southern Maryland in Division III.</p>
+        <p>The game taught me the stuff I still use every day: show up for the boring reps, take the loss, review the tape, fix one thing, go again.</p>
+        <p>These days I still watch a lot of film. Soccer tactics, BJJ, MMA breakdowns. I like seeing why something worked, frame by frame. Engineering scratches the same itch. I load and test my systems, kill a server mid-run on purpose, and study what happened.</p>
+      </div>
+      <ol class="timeline" aria-label="My path">
+        <li><b>The dream</b><span>Arrived in the U.S. aiming for the MLS.</span></li>
+        <li><b>College of Southern Maryland</b><span>Played Division III college soccer.</span></li>
+        <li><b>Morgan State University</b><span>B.S. Computer Science. 4.0 GPA. Graduating in 2027.</span></li>
+        <li><b>Next</b><span>Software engineering internship, Summer 2027.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="formation">
+  <div class="wrap">
+    <div class="head"><h2>Formation</h2><span class="mono">Skills</span></div>
+    <div class="formation">
+      <div class="pos">
+        <h3>Defense</h3><span class="mono">Backend &amp; systems</span>
+        <div class="chips"><span>Node.js</span><span>Fastify</span><span>FastAPI</span><span>WebSockets</span><span>REST</span><span>PostgreSQL</span><span>Redis</span><span>SQLite</span><span>Drizzle</span><span>SQLAlchemy</span></div>
+      </div>
+      <div class="pos">
+        <h3>Midfield</h3><span class="mono">Languages &amp; frontend</span>
+        <div class="chips"><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Java</span><span>Swift</span><span>SQL</span><span>C</span><span>React</span><span>Next.js</span><span>React Native</span><span>Tailwind</span><span>PWAs</span></div>
+      </div>
+      <div class="pos">
+        <h3>Attack</h3><span class="mono">Infra, testing &amp; AI</span>
+        <div class="chips"><span>Docker</span><span>nginx</span><span>GitHub Actions</span><span>Prometheus</span><span>Vitest</span><span>pytest</span><span>Load &amp; chaos testing</span><span>LangGraph</span><span>LLM APIs</span><span>MCP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Full time.</h2>
+      <p>Looking for a software engineering internship for Summer 2027. If you're building something real, I'd like to hear about it.</p>
+    </div>
+    <div class="contact">
+      <a href="mailto:amit7111019@gmail.com">amit7111019@gmail.com <span class="mono">Email</span></a>
+      <a href="https://linkedin.com/in/b-amit10" target="_blank" rel="noopener">linkedin.com/in/b-amit10 <span class="mono">LinkedIn</span></a>
+      <a href="https://github.com/b-amit11" target="_blank" rel="noopener">github.com/b-amit11 <span class="mono">GitHub</span></a>
+    </div>
+    <div class="copyline"><span>© <span id="yr">2026</span> Amit Bhattarai</span><span>Great Mills, MD</span></div>
+  </div>
+</footer>
+
+<div class="player" id="player">
+  <div class="bar">
+    <div class="disc" aria-hidden="true"></div>
+    <div class="meta"><b>All Falls Down</b><span>Kanye West · On repeat</span></div>
+    <button type="button" id="playBtn" aria-expanded="false" aria-controls="embed">Play</button>
+  </div>
+  <div class="embed" id="embed"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
