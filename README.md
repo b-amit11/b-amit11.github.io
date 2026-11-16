@@ -6,6 +6,7 @@ Personal portfolio. Computer Science student at Morgan State University.
 
 ## Featured projects
 
+- [Email-Agent](https://github.com/b-amit11/email-agent): An email agent that replies to customer emails
 - [Parley](https://github.com/b-amit11/parley): distributed real-time chat platform
 - [Calorie Tracker](https://github.com/b-amit11/calorie-tracker): web app with a native macOS companion
 - [RepoBrain](https://github.com/b-amit11/repobrain): code search engine with cited answers
