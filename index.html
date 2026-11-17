@@ -110,14 +110,15 @@
 
       <article class="card">
         <span class="num">03</span>
-        <h3>RepoBrain</h3>
-        <p class="sub">Code search engine with cited answers</p>
+        <h3>Email Agent</h3>
+        <p class="sub">AI support inbox with human review</p>
         <ul>
-          <li>Parses Python with tree-sitter, indexes Git snapshots incrementally by blob hash, and ranks with BM25.</li>
-          <li>REST API, browser UI and a read-only MCP server. LLM answers must cite real source excerpts or fall back to raw evidence.</li>
+          <li>Reads a Gmail support inbox every 60 seconds and drafts replies only from company fact sheets. Anything not covered gets flagged for follow-up instead of guessed.</li>
+          <li>A React dashboard where a person approves, edits, rejects or asks for a rewrite. Each draft shows which fact sheets it used, and replies are sent once, in the customer's thread.</li>
+          <li>25-email eval set, including prompt-injection and angry-customer cases, graded by a second model against a checklist. The baseline passed 25 of 25.</li>
         </ul>
-        <div class="chips"><span>Python</span><span>FastAPI</span><span>tree-sitter</span><span>SQLite FTS5</span><span>MCP</span></div>
-        <div class="links"><a href="https://github.com/b-amit11/repobrain" target="_blank" rel="noopener">Code on GitHub</a></div>
+        <div class="chips"><span>Python</span><span>FastAPI</span><span>Pydantic AI</span><span>Gmail API</span><span>Supabase</span><span>React</span><span>Docker</span></div>
+        <div class="links"><a href="https://github.com/b-amit11/email-agent" target="_blank" rel="noopener">Code on GitHub</a></div>
       </article>
 
       <article class="card">
